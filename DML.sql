@@ -1,0 +1,28 @@
+DELETE FROM CUSTOMER WHERE CUSTID = 1;
+
+-- revert the change
+ROLLBACK;
+
+
+
+UPDATE ORDERS SET QUANTITY = 25 WHERE ORDERID = 3;
+
+
+-- revert the change
+ROLLBACK;
+
+DELETE FROM DEPARTMENT WHERE DEPT_NAME = 'HR';
+
+-- revert the change
+ROLLBACK;
+
+
+UPDATE DEPARTMENT SET DEPT_LOCATION = 'Largo, MD' WHERE DEPT_NAME = 'HR';
+-- revert the change
+ROLLBACK;
+
+UPDATE ORDERS SET QUANTITY = 25 WHERE ORDERID = 3;
+-- revert the change
+ROLLBACK;
+
+
